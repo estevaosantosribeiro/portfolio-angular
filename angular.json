@@ -28,7 +28,8 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": ["bootstrap/dist/js/bootstrap.min.js"],
+            "outputPath": "dist/portfolio-angular"
           },
           "configurations": {
             "production": {
@@ -65,6 +66,15 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://estevaosantosribeiro.github.io/portfolio-angular/",
+            "repo": "https://github.com/estevaosantosribeiro/portfolio-angular.git",
+            "name": "estevaosantosribeiro",
+            "email": "estevaosantosribeiro@gmail.com"
+          }
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
